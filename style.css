@@ -507,9 +507,18 @@ a{
     padding-left: 0;
     padding-right: 0;
     border-radius: 0;
+    width: 90%;
+    margin-right: 0;
+  }
+  .poste{
+    font-size: 15px;
+    margin-left: 5px;
+  }
+  .parcours_annees:nth-child(4) .skils{
+    font-size: 13px;
   }
   .annees{
-    width: 100px;
+    width: 10%;
     border-radius: 0;
     background-color: #0d7164;
   }
@@ -583,9 +592,9 @@ a{
     width: 100%;
     color: var(--color3)
   }
-  /*#projet{
-
-  }*/
+  #projet{
+    margin-top: 23vh;
+  }
   .projet{
     display: flex;
     justify-content: center;
@@ -630,7 +639,7 @@ a{
   .prev_bout,
   .next_bout{
     font-size: 16px;
-    margin-right: 5px;
+    margin: 0;
   }
 
   .projet_description:nth-child(1) {
