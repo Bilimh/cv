@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+     <script src="js/Chart.min.js"></script>
+    <title>Vite App</title>
+  </head>
+  <body>
+   <header>
+    <div class="fermer_ouvrir">
+      <i class="fas fa-bars ouvrir"></i>
+      <i class="fas fa-times fermer"></i>
+    </div>
+    <nav class="accueil">
+      <ul class="bar_navigation">
+        <li><a href="#presentation"> Accueil</a> </li>
+        <li> <a href="#apropos"> À propos</a> </li>
+        <li> <a href="#competence">Compétence</a> </li>
+        <li> <a href="#projet"> Projet</a></li>
+        <li> <a href="#contact"> Contact </a></li>
+      </ul>
+    </nav>
+   </header>
+    <section id="presentation" class="presentation">
+      <div class="image">
+        <img src="./images/bil1.jpg"/>
+      </div>
+      <div class="presentation_text">
+        <div class="presentation_text_top">Bonjour, je suis</div>
+        <div class="presentation_text_middle">Omar Diankha</div>
+        <div class="presentation_text_bot">Je suis passioné par les mathématiques, la data science et le développement web.</div>
+      </div>
+    </section>
+    <section id="apropos"  data-aos="fade-up" class="apropos">
+      <div class="container">
+        <div class="apropos_title"> <h2>À propos</h2></div>
+        
+        <div class="apropos_text">
+          <div class="apropos_text_presentation">
+            Animé par la curiosité d'explorer les horizons infinis de la tech, je suis actuellement à la recherche d'une opportunité excitante pour mon premier boulot en tant que développeur web. Mon parcours académique en data science et en mathématiques m'a doté d'une solide capacité d'analyse et de résolution de problèmes, 
+            tandis que mon amour pour la technologie m'a poussé à plonger dans le monde du développement web.
+          </div>
+          <div class="apropos_text_parcours">
+            <div class="apropos_text_parcours_title">
+              <label id="color_radio1">Expériences
+                <input type="radio" name="a_propos" id="experience_radio" checked>
+              </label>
+              <label id="color_radio2" class="rotating-element">Formation
+                <input type="radio" name="a_propos" id="formation_radio">
+              </label>
+              <label id="color_radio3">Certificats
+                <input type="radio" name="a_propos" id="certificat_radio">
+              </label>
+            </div>
+            <!--Expériences-->
+            <div id="experience">
+              <div class="parcours_annees">
+                <div class="annees">Oct 2023</div>
+                <div class="experience"><p class="poste">Stagiaire, idIA tech</p>
+                  <ul class="skils">
+                    <li>Grimport</li>
+                    <li>Web mining</li>
+                    <li>Reverse-engineering</li>
+                  </ul>
+                </div>
+              </div>
+
+            <div class="parcours_annees">
+              <div class="annees">Avr 2023</div>
+              <div class="experience"><p class="poste">Stagiaire, Datascientest</p>
+                <ul class="skils">
+                  <li>Analyse de données</li>
+                  <li>Web scraping</li>
+                  <li>Machine/Deep learning</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="parcours_annees">
+              <div class="annees">Oct 2022</div>
+              <div class="experience"><p class="poste">Doctorant, Université Paris 8</p>
+                <ul class="skils">
+                  <li>Cryptographie</li>
+                  <li>Attaques par cannaux cachés</li>
+                  <li>Masquage booléen</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="parcours_annees">
+              <div class="annees">Juil 2019</div>
+              <div class="experience"><p class="poste">Stagiaire, Télécom ParisTech</p>
+                <ul class="skils">
+                  <li>Méthodologie de recherche</li>
+                  <li>Cryptanalyse</li>
+                  <li>Modélisation mathématique</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+            <!--Fin Expériences-->
+
+           <!--Formation-->
+          <div id="formation" class="rotating-element">
+           <div class="parcours_annees">
+            <div class="annees">2023</div>
+            <div class="experience"><p class="poste">Certification, Studi</p>
+              <ul class="skils">
+                <li>Développeur Web/mobile</li>
+                <li>Web scraping</li>
+                <li>Machine/Deep learning</li>
+              </ul>
+            </div>
+          </div>
+
+           <div class="parcours_annees">
+            <div class="annees">2023</div>
+            <div class="experience"><p class="poste">Certification, Datascientest</p>
+              <ul class="skils">
+                <li>Data science</li>
+                <li>Développement web</li>
+                <li>Machine/Deep learning</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="parcours_annees">
+            <div class="annees">2022</div>
+            <div class="experience"><p class="poste">Doctorant, Université Paris 8</p>
+              <ul class="skils">
+                <li>Cryptographie</li>
+                <li>Codes correcteurs d'erreur</li>
+                <li>Cryptographie Post quantique</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="parcours_annees">
+            <div class="annees">2019</div>
+            <div class="experience"><p class="poste">Master mathématiques</p>
+              <ul class="skils">
+                <li>Cryptographie</li>
+                <li>Statistiques/Probabilités</li>
+                <li>Sécurité et Réseaux</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+           <!--Fin Formation-->
+
+           <!--Certification-->
+          
+           <div id="certification">
+            
+            <div id="diplome_master" class="certification_item">
+              <img src="./images/diplome.jpg"/>
+            </div>
+        
+            <div class="certification_item" id="certi_ds">
+              <img src="./images/datascientest.jpg"/>
+            </div>
+            <div class="certification_item" id="open1">
+              <img src="./images/openjavascript.png"/>
+            </div>
+            <div class="certification_item" id="open2">
+              <img src="./images/opensqlphp.png"/>
+            </div>
+            <div class="certification_item" id="ds1">
+              <img src="./images/webscraping.png"/>
+            </div>
+            <div class="certification_item" id="ds2">
+              <img src="./images/sklearn.png">
+            </div>
+            <div id="toggle">
+              <i class="fas fa-times"></i> 
+            </div>
+           </div>
+           <!--Fin Certification-->
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="competence" class="competence"  data-aos="fade-up">
+        <div class="competence_title"><h2> Compétences </h2></div>
+        <div class="competence_text">
+          <div class="competence_text_lang">
+            <div class="competence_langage"><img src="./images/canva.png"/> </div>
+          </div>
+          <div class="competence_text_item">
+            
+            <div class="experience_competence"><p class="poste">Développement web</p>
+              <ul class="skils">
+               <li>React /Vite Js</li>
+                <li>Symfony</li>
+                <li>MySQL</li>
+              </ul>
+          </div>
+          <div class="experience_competence"><p class="poste">Data science</p>
+            <ul class="skils">
+             <li>Scikit-Learn </li>
+              <li>TensorFlow</li>
+              <li>Pandas</li>
+            </ul>
+        </div>
+        <div class="experience_competence"><p class="poste">Outil collaboratif</p>
+          <ul class="skils">
+           <li>Git & Github</li>
+            <li>Overleaf</li>
+            <li>Google colab</li>
+          </ul>
+        </div>
+          </div>
+          
+        </div>
+    </section>
+    <section id="projet"  data-aos="fade-up" data-aos-delay="100">
+      <div class="projet">
+        <div class="container">
+          <div class="competence_title"><h2>Projets</h2></div>
+          <div class="projet_item" id="fatimar">
+            <div class="projet_description"><h2>Fatimar</h2>
+               <div> <strong> Description :</strong>
+                Fatimar est un projet personnel conçu pour me permettre 
+                de perfectionner mes compétences en développement web en créant une plateforme de vente en ligne.
+                </div>
+               <div>
+                <strong>Catalogue de produits : </strong> Ce site propose
+                 une variété de produits factices pour simuler une expérience de shopping en ligne complète.
+               </div>
+               <div><strong> Recherche avancée : </strong> Les visiteurs peuvent utiliser
+                 la fonction de recherche pour trouver des produits simulés et s'exercer à naviguer dans le site</div>
+                <div> <strong>Technologies utilisées :</strong>  J'ai utilisé MySQL pour la gestion de la base de données, 
+                  PHP et HTML pour le développement de l'application, dans le but d'acquérir de l'expérience pratique.</div>
+              <div class="outils">
+               <div class="outils_item">JavaScript</div>
+               <div class="outils_item">PHP</div>
+               <div class="outils_item">MySQL</div>
+              </div>
+            </div>
+            <div class="projet_description"><img src="./images/fatimarShop.png"/> </div>
+            <div class="projet_description"> <strong>Objectif personnel</strong> Ce projet a été créé dans le but de m'améliorer en tant que développeur web en mettant en pratique mes compétences 
+              et en apprenant de nouvelles technologies tout en simulant une expérience e-commerce complète.
+            </div>
+            <div class="projet_description"> 
+              <div class ="prev_next_bout"> 
+                <span class="prev_bout"> <i class="fas fa-chevron-left"> </i> Projet précédent</span> | 
+                <span class="next_bout">Projet Suivant <i class="fas fa-chevron-right"> </i></span>
+              </div>
+            </div>
+        </div>
+        <div class="projet_item" id="jsquiz">
+          <div class="projet_description"><h2>Quiz me</h2>
+             <div> <strong> Description :</strong>
+              Le projet "Quiz me" est un passionnant projet personnel que j'ai développé pour renforcer mes compétences 
+              en développement web tout en créant une expérience interactive d'apprentissage et de divertissement.
+              </div>
+             <div>
+              <strong>Variété de Questions : </strong> 
+              Ce quiz propose une large gamme de questions captivantes, couvrant des sujets divers tels que l'histoire,
+               la géographie, les sciences etc.
+            
+             </div>
+             <div><strong> Fonctionnalités d'Interaction: </strong>
+              Les participants peuvent répondre aux questions, 
+              vérifier leurs réponses instantanément et explorer des explications détaillées pour chaque question.
+             </div>
+              <div><strong>Technologies utilisées :</strong>  
+                J'ai utilisé JavaScript pour la gestion des questions.
+               </div>
+            <div class="outils">
+             <div class="outils_item">JavaScript</div>
+             <div class="outils_item">ViteJS</div>
+             <div class="outils_item">HTML</div>
+            </div>
+          </div>
+          <div class="projet_description"><img src="./images/quiz1.png"/> </div>
+          <div class="projet_description"> <strong>Objectif personnel</strong>
+            Ce projet a été une opportunité pour moi de mettre en pratique mes compétences en développement 
+            web tout en créant une plateforme ludique et éducative.
+          
+          </div>
+            <div class="projet_description"> 
+              <div class ="prev_next_bout"> 
+                <span class="prev_bout"> <i class="fas fa-chevron-left"> </i>Projet précédent</span> |
+                <span class="next_bout">Projet Suivant <i class="fas fa-chevron-right"></i></span>
+              </div>
+            </div>
+      </div>
+      <div class="projet_item" id ="entreprise">
+            <div class="projet_description"><h2>déc'Art</h2>
+               <div> <strong> Description :</strong>
+                déc'Art est un projet personnel que j'ai développé avec Django pour approfondir mes compétences en développement web tout en créant une plateforme de vente en ligne dédiée aux meubles de qualité. Cette boutique 
+                en ligne factice offre une expérience de shopping immersive et complète pour les amateurs de meubles.
+                </div>
+                <div> <strong>Technologies utilisées :</strong> 
+                  Pour ce projet, j'ai utilisé Django, un framework web Python puissant, pour gérer la logique de l'application
+                 et la gestion de la base de données. Le système de base de données repose sur PostgreSQL, offrant robustesse et performances. HTML, CSS, et JavaScript ont été employés pour créer l'interface utilisateur dynamique.
+                </div>
+              <div class="outils">
+               <div class="outils_item">JavaScript</div>
+               <div class="outils_item">GSAP</div>
+               <div class="outils_item">AOS</div>
+               <div class="outils_item">PostgreSQL</div>
+              </div>
+            </div>
+            <div class="projet_description"><img src="./images/deco.png"/> </div>
+            <div class="projet_description"> <strong>Objectif personnel</strong> 
+              La création de cette boutique en ligne de meubles m'a permis d'apprendre et 
+              de maîtriser Django, ainsi que d'améliorer ma compréhension des concepts clés du développement web.</div>
+              <div class="projet_description"> 
+                <div class ="prev_next_bout"> 
+                  <span class="prev_bout"> <i class="fas fa-chevron-left"> </i> Projet précédent</span> | 
+                  <span class="next_bout"> Projet Suivant <i class="fas fa-chevron-right"> </i></span>
+                </div>
+              </div>
+        </div>
+        
+      </div>
+    </section>
+    <section id="contact">
+      <div class="contact_item" data-aos="zoom-in" data-aos-delay="300">
+        <div class="contact_text_intro">
+          Prêt à travailler ensemble ?
+        </div>
+        <div class="contacter_moi"> <div class="contacter_moi_top"> Contactez moi!</div>
+          <div class="contact_bottom">
+            Je serais ravi de discuter de vos projets et de collaborer avec vous.
+             Je suis toujours ouvert aux nouvelles
+              opportunités passionnantes !
+          </div>
+          <div class="mes_contacts">
+            <div class="Github"> <a href="https://github.com/Bilimh"> 
+              <i class="fab fa-github"></i> Github </a> </div>
+              <div class="LinkedIn"><a href="https://www.linkedin.com/in/omar-diankha-9081161a7/"> 
+                <i class="fab fa-linkedin"></i></i> LinkedIn </a></div>
+                <div class="phone"><i class="fas fa-phone"></i> +33 7.68.03.13 </div>
+             <div class="email"><i class="fas fa-envelope"></i> omar1.diankha@gmail.com</div> 
+          
+            </div>
+           
+        </div>
+      </div>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="module" src="/main.js"></script>
+  </body>
+</html>
