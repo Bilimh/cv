@@ -281,9 +281,9 @@ prevBouton.forEach((next) => {
 
 const fermer = document.querySelector('.fermer')
 const ouvrir = document.querySelector('.ouvrir')
-const accueil = document.querySelector('.accueil')
+const accueil = document.querySelector('.the_menu')
 //const body =document.querySelector('body')
-const liens = document.querySelectorAll('.accueil a')
+const liens = document.querySelectorAll('.the_menu a')
 
 ouvrir.addEventListener('click', () =>{
     ouvrir.style.display ="none"
@@ -300,15 +300,16 @@ fermer.addEventListener('click', () =>{
 })
 
 
-liens.forEach((index) =>{
-  index.addEventListener('click', () => {
-    accueil.style.transform = "translateX(-100%)"
-    ouvrir.style.display ="block"
-    fermer.style.display ="none"
-    accueil.style.transform = 'translate 0.1s'
-  })
-  
-})
+liens.forEach((link) => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            accueil.style.transform = "translateX(-100%)";
+            ouvrir.style.display = "block";
+            fermer.style.display = "none";
+            accueil.style.transform = 'translate 0.1s';
+        }
+    });
+});
 
 
 

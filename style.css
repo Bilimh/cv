@@ -24,41 +24,50 @@ body{
   color: var(--color1);
 }
 
-.accueil{
+.container_menu{
   display: flex;
-  justify-content: center;
-  background: var(--color1);
-  color: var(--color2);
-  height: 10vh;
+  background-color: var(--color1);
+  padding: 1.23rem;
   align-items: center;
-  font-weight: bold;
-  text-transform: uppercase;
-  width: 100%;
-  z-index: 1;
-  margin-bottom: 23px;
+  margin-bottom: 2rem;
 }
-.bar_navigation{
+
+.the_menu{
   display: flex;
-  justify-content: space-around;
   width: 60%;
+  justify-content: space-around;
+  color: var(--color1);
+  align-items: center;
+  font-size: 1.23rem;
+  text-transform: uppercase;
 }
-nav li{
+.the_menu li{
   list-style: none;
 }
-.accueil_text,
-.contact_text{
+.logo, .cv{
   width: 20%;
-  margin-left: 150px;
+  font-size: 1.23rem;
+  text-transform: uppercase;
+  color: #fe5000;
 }
-/*#presentation{
-  height: 90vh;
-}*/
+.logo{
+  margin-left: 2rem;
+}
+.cv{
+  display: flex;
+  justify-content: end;
+  margin-right: 3rem;
+}
 
-.presentation{
+.logo img{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.image{
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .image img{
@@ -180,7 +189,7 @@ input[type ="radio"]{
   display: flex;
 }
 .certification_item img{
-  width: 215px
+  width: 100%;
 }
 
 label{
@@ -195,7 +204,6 @@ color: #494b4a;
 
 
 .certification_zoom img{
-  width: 1000px;
   width: 700px;
   margin-bottom: 10px;
   display: flex;
@@ -219,9 +227,7 @@ color: #494b4a;
   border-radius: 50%;
 }
 
-#competence{
-  height: 80vh;
-}
+
 .competence{
   display: flex;
   align-items: center;
@@ -250,7 +256,6 @@ color: #494b4a;
 
 .competence_text_lang{
   width: 43%;
-
   margin-top: -100px;
 }
 .experience_competence{
@@ -421,6 +426,7 @@ a{
   padding-top: 23px;
   margin-right: 23px;
   position: absolute;
+  z-index: 2;
 }
 .ouvrir{
   color: var(--color3);
@@ -432,18 +438,111 @@ a{
   background-color: #0d7164;
  }
 
-@media screen and (max-width: 767px){
-  header{
-    width: 100%;
-    z-index: 20;
+ /*tablette*/
+@media screen and (max-width: 992px){
+  .projet_item{
+    grid-template-columns: repeat(1, 1fr);
   }
-
-  .accueil{
+  .competence_text{
     display: flex;
     flex-direction: column;
-    height: 65vh;
-    transform: translateX(-100%);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
   }
+
+  .competence_text_item{
+    width: 100%;
+  }
+  
+  .competence_text_lang{
+    width: 100%;
+    margin-top: -50px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  
+  }
+
+
+ 
+  .experience_competence{
+    height: 100px;
+    background: var(--color1);
+    color: var(--color2);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 30px;
+    margin-bottom: 20px;
+    border-radius: 0;
+    margin-bottom: 23px;
+    font-size: 1.23rem;
+  }
+  .poste{
+    width: 50%;
+    color: var(--color3);
+    font-size: 1.5rem;
+    margin-left: 6rem;
+  }
+  .apropos_text{
+    display: flex;
+    flex-direction: column;
+  }
+  .apropos_text_presentation,
+  .apropos_text_parcours{
+    width: 100%;
+    margin-bottom: 23px;
+  }
+  .annees, 
+  .experience{
+    height: 120px;
+    font-size: 1.23rem;
+  }
+  .annees{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .experience{
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 0;
+    width: 90%;
+    margin-right: 0;
+  }
+ 
+  /*.parcours_annees:nth-child(4) .skils{
+    font-size: 13px;
+  }*/
+  .annees{
+    width: 10%;
+    border-radius: 0;
+    background-color: #0d7164;
+  }
+  .parcours_annees{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+  }
+  .the_menu{
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    left:0;
+    background-color: #001233;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    z-index: 1;
+    transform: translateX(-100%);
+    position: absolute;
+  }
+
+ 
   .fermer{
     display: none;
     top: 23px;
@@ -456,16 +555,8 @@ a{
     margin-right: 13px;
     padding-bottom: 13px;
   }
-  .bar_navigation{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    align-items: center;
-    position: absolute;
-  }
-  #presentation{
-    margin-top: -55vh;
-  }
+ 
+
   .fermer_ouvrir{
     display: flex;
     justify-content: end;
@@ -474,9 +565,59 @@ a{
     left: 23px;
   }
 
-  /*#presentation{
-    height: 65vh;
-  }*/
+  .presentation_text_middle{
+    font-size: 46px;
+    padding-left: 15px;
+  }
+  .presentation_text_top,
+  .presentation_text_bot{
+    font-size: 23px;
+    padding-left: 15px;
+  }
+
+}
+  
+
+
+/*Mobile*/
+@media screen and (max-width: 768px){
+  .the_menu{
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    left:0;
+    background-color: #001233;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    z-index: 1;
+    transform: translateX(-100%);
+    position: absolute;
+  }
+
+ 
+  .fermer{
+    display: none;
+    top: 23px;
+    font-size: 23px;
+  }
+  .ouvrir{
+    display: block;
+    top: 0px;
+    font-size: 23px;
+    margin-right: 13px;
+    padding-bottom: 13px;
+  }
+ 
+
+  .fermer_ouvrir{
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+    color: #f9f3ea;
+    left: 23px;
+  }
+
   .presentation_text_middle{
     font-size: 46px;
     padding-left: 15px;
@@ -503,6 +644,10 @@ a{
     height: 120px;
     font-size: 14px;
   }
+  .annees{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   .experience{
     padding-left: 0;
     padding-right: 0;
@@ -513,6 +658,9 @@ a{
   .poste{
     font-size: 15px;
     margin-left: 5px;
+  }
+  .skils{
+    font-size: 15px;
   }
   .parcours_annees:nth-child(4) .skils{
     font-size: 13px;
@@ -534,14 +682,13 @@ a{
     gap: 10px;
     margin-top: 20px;
   }
-  .certification_item img{
-    width: 123px
-  }
+
   .certification_zoom img{
     width: 400px;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
   #toggle{
     width: 10%;
@@ -592,9 +739,7 @@ a{
     width: 100%;
     color: var(--color3)
   }
-  #projet{
-    margin-top: 23vh;
-  }
+
   .projet{
     display: flex;
     justify-content: center;
@@ -602,10 +747,7 @@ a{
     flex-direction: column;
   }
   .projet_item{
-    display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
-    width: 100%;
   }
   
   .projet_item_projet{
@@ -627,11 +769,11 @@ a{
     flex-direction: column;
     width: 100%;
     margin-top: 23px;
-    line-height: 1.78rem;
+   
   }
   .projet_description img{
     width: 100%;
-    height: 350px;
+    height: auto;
   }
   .hidden{
     display: none;
@@ -639,23 +781,23 @@ a{
   .prev_bout,
   .next_bout{
     font-size: 16px;
-    margin: 0;
+    margin: 0fd;
   }
 
   .projet_description:nth-child(1) {
-    order: 1; /* Inverser l'ordre du premier élément */
-}
+    order: 1; /* Inverser l'ordre du premier élément */ 
+  }
 
-.projet_description:nth-child(2) {
+ .projet_description:nth-child(2) {
     order: 2; /* Inverser l'ordre du deuxième élément */
-}
+  }
 
-.projet_description:nth-child(3) {
+ .projet_description:nth-child(3) {
     order: 4; /* Inverser l'ordre du troisième élément */
-}
-.projet_description:nth-child(4) {
+ }
+ .projet_description:nth-child(4) {
   order: 3; /* Inverser l'ordre du troisième élément */
-}
+ }
 
 
   .contacter_moi{
@@ -680,7 +822,6 @@ a{
 
   #contact{
     background: #001233;
-    /*height: 50vh;*/
   }
 
   .mes_contacts{
@@ -727,5 +868,6 @@ a{
    height: auto;
    background-color: #0d7164;
   }
-
 }
+
+

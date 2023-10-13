@@ -73,4 +73,99 @@
     </div>
   </div>
 
-  <canvas id="charts"></canvas>
+  <header>
+    <div class="fermer_ouvrir">
+      <i class="fas fa-bars ouvrir"></i>
+      <i class="fas fa-times fermer"></i>
+    </div>
+    <nav class="accueil">
+      <ul class="bar_navigation">
+        <li><a href="#presentation"> Accueil</a> </li>
+        <li> <a href="#apropos"> À propos</a> </li>
+        <li> <a href="#competence">Compétence</a> </li>
+        <li> <a href="#projet"> Projet</a></li>
+        <li> <a href="#contact"> Contact </a></li>
+        <li> <a href="/cv/pdf/OmarDiankhaCVB.pdf"> Cv </a></li>
+      </ul>
+    </nav>
+   </header>
+
+
+   <section id="presentation" class="presentation">
+    <div class="fermer_ouvrir">
+      <i class="fas fa-bars ouvrir"></i>
+      <i class="fas fa-times fermer"></i>
+    </div>
+    <nav class="accueil">
+      <ul class="bar_navigation">
+        <li><a href="#presentation"> Accueil</a> </li>
+        <li> <a href="#apropos"> À propos</a> </li>
+        <li> <a href="#competence">Compétence</a> </li>
+        <li> <a href="#projet"> Projet</a></li>
+        <li> <a href="#contact"> Contact </a></li>
+        <li> <a href="/cv/pdf/OmarDiankhaCVB.pdf"> Cv </a></li>
+      </ul>
+    </nav>
+
+  
+      <div class="image">
+        <img src="./images/bil1.jpg"/>
+      </div>
+      <div class="presentation_text">
+        <div class="presentation_text_top">Bonjour, je suis</div>
+        <div class="presentation_text_middle">Omar Diankha</div>
+        <div class="presentation_text_bot">Je suis passioné par les mathématiques, la data science et le développement web.</div>
+      </div>
+
+
+
+      <script>
+
+const certification_item = document.querySelectorAll('.certification_item');
+const apropos_text_presentation = document.querySelector('.apropos_text_presentation');
+const toggle = document.querySelector("#toggle");
+toggle.style.display = "none";
+const certificat_title = document.querySelector('.apropos_title');
+
+function handleItemClick(item, titleText) {
+    item.classList.add('certification_zoom');
+    apropos_text_presentation.style.display = "none";
+    checkRadio.style.display = "none";
+    certification_item.forEach((element) => {
+        if (element !== item) {
+            element.style.display = "none";
+        }
+    });
+    certificat_title.innerHTML = `<h2>${titleText}</h2>`;
+    toggle.style.display = "block";
+    toggle.addEventListener('click', () => {
+        toggle.style.display = "none";
+        item.classList.remove('certification_zoom');
+        apropos_text_presentation.style.display = "block";
+        checkRadio.style.display = "";
+        certification_item.forEach((element) => {
+            if (element !== item) {
+                element.style.display = "";
+            }
+        });
+        certificat_title.innerHTML = '<h2> À propos </h2>';
+    });
+}
+
+for (let item of certification_item) {
+    switch (item.id) {
+        case "diplome_master":
+            item.addEventListener('click', () => {
+                handleItemClick(item, 'Diplôme master mathématiques');
+            });
+            break;
+        case "certi_ds":
+            item.addEventListener('click', () => {
+                handleItemClick(item, 'Certificat Data Science');
+            });
+            break;
+        // Ajoutez d'autres cas ici pour gérer les autres éléments de la même manière
+    }
+}
+
+      </script>
