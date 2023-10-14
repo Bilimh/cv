@@ -311,6 +311,34 @@ liens.forEach((link) => {
     });
 });
 
+let tl = gsap.timeline();
+
+
+tl.from('.welcome', {
+    duration: 1.25,
+    filter: "blur(15px)"
+});
+
+tl.from('.the_menu','.presentation_text', {
+    duration: 0.75,
+    opacity: 0
+}); 
+
+
+tl.from('.fermer_ouvrir', {
+    duration: 0.75,
+    x : '-130%'
+});
+
+/*tl.from('.presentation_text', {
+    duration: 0.75,
+    //opacity: 0
+    x : '-120%'
+});*/
+
+
+
+
 
 
 
